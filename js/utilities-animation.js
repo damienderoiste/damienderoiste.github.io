@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $.preloader.start({ modal: true, src: "img/sprites.png" });
   JSONstat(
     "https://www.cso.ie/StatbankServices/StatbankServices.svc/jsonservice/responseinstance/E2001",
     function() {
@@ -17,6 +18,6 @@ displayResults = function(ds) {
   }).value;
 
   $("#result").text(num);
-
+  $.preloader.stop();
   // alert( num );
 };

@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $.ajax({
-    url: "navigation/navigation.html",
+    url: "includes/navigation.html",
     dataType: "html",
     success: function(data) {
       //alert(data);
@@ -9,7 +9,7 @@ $(document).ready(function() {
   });
 
   $.ajax({
-    url: "topbar.html",
+    url: "includes/topbar.html",
     dataType: "html",
     success: function(data) {
       //alert(data);
@@ -17,4 +17,12 @@ $(document).ready(function() {
     }
   });
 
+  $.ajax({
+    url: "includes/footer.html",
+    dataType: "html",
+    success: function(data) {
+      //alert(data);
+      $("#footer").html(data);
+    }
+  });
 });
