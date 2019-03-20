@@ -12,6 +12,10 @@ $(document).ready(function () {
   $('#county-select').change(function () {
     renderBarChart(ds)
   })
+
+  $('#county-select').select2({
+    theme: "classic"
+  });
 })
 
 displayResults = function (ds) {
@@ -29,17 +33,13 @@ displayResults = function (ds) {
 }
 
 renderBarChart = function (ds) {
+  $("#page-title").text(ds.label);
   var time = ds.Dimension('Census Year').id
   $('#bar-chart-card')
     .find('.card-header')
     .find('h6')
     .text(
-      'Population Change : ' +
-        $('#county-select option:selected').text() +
-        ' ' +
-        time[0] +
-        ' to ' +
-        time[time.length - 1]
+      $('#county-select option:selected').text()
     )
 
   var dataMales = []
@@ -65,28 +65,32 @@ renderBarChart = function (ds) {
     )
   })
 
+  var data = {
+    labels: time,
+    datasets: [
+      {
+        label: 'Males: ',
+        data: dataMales,
+        backgroundColor: 'rgba(173,216,230)', // version >2 useus background color
+        borderWidth: 1
+      },
+      {
+        label: 'Females: ',
+        data: dataFemales,
+        backgroundColor: 'rgba(255,192,203)', // version >2 useus background color
+        borderWidth: 1
+      }
+    ]
+  }
+
   var ctx = document
     .getElementById('population-by-county-bar-chart')
     .getContext('2d')
+
+  ctx.height = 100;
   var myChart = new Chart(ctx, {
     type: 'bar',
-    data: {
-      labels: time,
-      datasets: [
-        {
-          label: 'Males: ',
-          data: dataMales,
-          backgroundColor: 'rgba(173,216,230)', // version >2 useus background color
-          borderWidth: 1
-        },
-        {
-          label: 'Females: ',
-          data: dataFemales,
-          backgroundColor: 'rgba(255,192,203)', // version >2 useus background color
-          borderWidth: 1
-        }
-      ]
-    },
+    data: data,
     options: {
       tooltips: {
         mode: 'label',
