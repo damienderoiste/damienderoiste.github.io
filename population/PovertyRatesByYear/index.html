@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>SB Admin 2 - Animation Utilities</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
+
+  <!-- Custom styles for this template-->
+  <link href="/css/sb-admin-2.min.css" rel="stylesheet" />
+  <link href="/css/custom.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar"></div>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Topbar -->
+        <div id="topbar"></div>
+
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div id="main-content" class="container-fluid" style="display: none">
+          <!-- Page Heading -->
+          <h1 id="page-title" class="h3 mb-1 text-gray-800"></h1>
+
+          <!-- Content Row -->
+          <div class="row">
+            <!-- Area Chart -->
+            <div class="col">
+              <div id="bar-chart-card" class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary"></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+
+                  <div class="chart-container">
+                    <canvas id="poverty-rates-line-chart"></canvas>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Area Chart -->
+            <div class="col">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Data as a Table</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <table id="dataset-table" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Sex</th>
+                        <th>Statistic</th>
+                        <th>Year</th>
+                        <th>Value</th>
+                      </tr>
+                    </thead>
+
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Area Chart -->
+            <div class="col">
+              <div id="dataset-details" class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Dataset Details</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Data link: <span name="data-link"></span></li>
+                    <li class="list-group-item">Source: <span name="source"></span></li>
+                    <li class="list-group-item">Date Updated : <span name="date-updated"></span></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <div id="footer"></div>
+      <!-- End of Footer -->
+    </div>
+    <!-- End of Content Wrapper -->
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="/js/sb-admin-2.min.js"></script>
+  <script src="/js/json-stat.js"></script>
+  <script src="/js/jquery.preloaders.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css" />
+
+  <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+  <!-- Page specific scripts-->
+  <script src="/js/common.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
